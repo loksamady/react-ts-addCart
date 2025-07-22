@@ -16,22 +16,60 @@ const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
     decreaseCartQuantity,
     removeFromCart,
   } = useShoppingCart();
-  
+
   const quantity = getItemQuantity(id);
 
   return (
-    <Card className="store-item-card" style={{ padding: 0 }}>
+    <Card
+      className="store-item-card border rounded-b-lg shadow-lg"
+      style={{ padding: 0 }}
+    >
       <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
-        <img
-          src={imgUrl}
-          alt={name}
+        <div
           style={{
-            width: "100%",
-            objectFit: "cover",
-            maxHeight: 200,
+            position: "relative",
+            overflow: "hidden",
             borderRadius: "8px 8px 0 0",
+            background: "linear-gradient(45deg, #f0f0f0, #e0e0e0)",
           }}
-        />
+        >
+          <img
+            src={imgUrl}
+            alt={name}
+            className="transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110"
+            style={{
+              width: "100%",
+              height: "220px",
+              objectFit: "cover",
+              filter: "contrast(1.1) saturate(1.1)",
+              transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.08)";
+              e.currentTarget.style.filter =
+                "contrast(1.15) saturate(1.2) brightness(1.05)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1)";
+              e.currentTarget.style.filter = "contrast(1.1) saturate(1.1)";
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background:
+                "linear-gradient(135deg, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.1) 100%)",
+              opacity: 0,
+              transition: "opacity 0.3s ease",
+              pointerEvents: "none",
+            }}
+            className="image-overlay"
+          />
+        </div>
         <div
           style={{
             flex: 1,

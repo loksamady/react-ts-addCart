@@ -1,0 +1,45 @@
+/* Enhanced Store Item Styles */
+.store-item-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e2e8f0 !important;
+}
+
+.store-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  border-color: #cbd5e0 !important;
+}
+
+.store-item-card:hover .image-overlay {
+  opacity: 1 !important;
+}
+
+/* Smooth image loading */
+.store-item-card img {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.store-item-card img[src] {
+  animation: none;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Button hover effects */
+.store-item-card button {
+  transition: all 0.2s ease-in-out;
+}
+
+.store-item-card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

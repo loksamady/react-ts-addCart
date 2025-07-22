@@ -22,5 +22,41 @@
     "name": "Car",
     "price": 14000,
     "imgUrl": "/imgs/car.jpg"
+  },
+  {
+    "id": 5,
+    "name": "AirPods",
+    "price": 199.99,
+    "imgUrl": "/imgs/aripod.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Camera",
+    "price": 299.99,
+    "imgUrl": "/imgs/camera.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "Motorcycle",
+    "price": 8500,
+    "imgUrl": "/imgs/moto.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Phone",
+    "price": 899.99,
+    "imgUrl": "/imgs/phone.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Shoes",
+    "price": 79.99,
+    "imgUrl": "/imgs/shose.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Watch",
+    "price": 249.99,
+    "imgUrl": "/imgs/watch.jpg"
   }
 ]
